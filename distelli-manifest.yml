@@ -1,0 +1,14 @@
+arthop/arthop_webapp:
+  PkgInclude:
+    - '*'
+  PreInstall:
+    - echo "Starting PreInstall"
+    - echo $DISTELLI_ENV
+    - cd /distelli/envs/$DISTELLI_ENV
+  Start:
+    - echo $DISTELLI_INSTALLHOME
+    - cd $DISTELLI_INSTALLHOME
+    - echo "Start Application"
+    - sudo /usr/local/bin/docker-compose build
+    - sudo /usr/local/bin/docker-compose -p app up -d
+    - sudo docker ps

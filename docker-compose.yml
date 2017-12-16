@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: app_web
+    command: yarn deploy
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: production

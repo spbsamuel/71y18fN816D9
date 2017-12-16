@@ -5,7 +5,11 @@
   "repository": "git@github.com:spbsamuel/71y18fN816D9.git",
   "author": "samuel <spbsamuel@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "deploy": "pm2 start production.js && pm2 logs"
+  },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "pm2": "^2.9.1"
   }
 }
