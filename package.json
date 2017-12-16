@@ -1,0 +1,11 @@
+{
+  "name": "client-prod",
+  "version": "1.0.0",
+  "main": "production.js",
+  "repository": "git@github.com:spbsamuel/71y18fN816D9.git",
+  "author": "samuel <spbsamuel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
