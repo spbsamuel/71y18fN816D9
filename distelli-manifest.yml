@@ -5,6 +5,7 @@ arthop/arthop_webapp:
     - echo "Starting PreInstall"
     - echo $DISTELLI_ENV
     - cd /distelli/envs/$DISTELLI_ENV
+    - sudo /usr/local/bin/docker-compose -p app down
   Start:
     - echo $DISTELLI_INSTALLHOME
     - cd $DISTELLI_INSTALLHOME
