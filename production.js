@@ -9,4 +9,4 @@ app.use('/dist', express.static(path.join(__dirname, './dist')));
 
 app.use(ServerRenderer({}));
 
-app.listen(3000);
+app.listen(8080);
