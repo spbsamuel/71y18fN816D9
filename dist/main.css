@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);._1PG69nQ1By {
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i);._1PG69nQ1By {
   margin: 20px 0;
   display: block;
   text-align: left; }
@@ -665,6 +665,27 @@
   ._1chvh-lJ5D hr {
     width: 30%;
     margin-left: 0; }
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("/styles/fonts/Avenir-Light-webfont.woff") format("font-woff"); }
+
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("/styles/fonts/Avenir-Black-webfont.woff") format("font-woff"); }
+
+@font-face {
+  font-family: "Didot-Italic";
+  src: url("/styles/fonts/Didot-Italic.ttf") format("ttf");
+  font-style: italic; }
+
+.EnvKuF7wDM {
+  flex: 1 1 auto;
+  position: relative; }
+
+@media only screen and (max-width: 960px) {
+  .EnvKuF7wDM {
+    height: 48vw;
+    flex: 1 1 100%; } }
 @font-face {
   font-family: "Avenir-Light";
   src: url("/styles/fonts/Avenir-Light-webfont.woff") format("font-woff"); }
