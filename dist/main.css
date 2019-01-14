@@ -388,7 +388,8 @@
   height: auto;
   display: block;
   max-height: 80vh;
-  max-width: 80vw; }
+  max-width: 80vw;
+  object-fit: cover; }
 @font-face {
   font-family: "Avenir-Light";
   src: url("/styles/fonts/Avenir-Light-webfont.woff") format("font-woff"); }
@@ -439,6 +440,8 @@
   font-size: 1.4rem; }
   ._1CjYqwAqcd h2 {
     font-size: 1.1em; }
+  ._1CjYqwAqcd p {
+    white-space: pre-line; }
 
 .Jx9K8fs2tf {
   width: 100%;
@@ -2199,5 +2202,3 @@ Desktop 960-1200px
     font-family: "Avenir-Black", sans-serif !important; }
   .no-fouc {
     display: block !important; }
-
-/*# sourceMappingURL=main.css.map*/
