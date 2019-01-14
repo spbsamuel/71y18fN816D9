@@ -25258,8 +25258,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var window = { location: { hostname: process.env.STAGING ? "devarthop.site" : "arthop.co" } };
-
 function serverRenderer() {
   return function (req, res, next) {
     var search = Object(__WEBPACK_IMPORTED_MODULE_13_query_string__["extract"])(req.url);
@@ -38641,7 +38639,9 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 
 
 
-var isProd = __WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(window, 'location.hostname', '').toLowerCase() === "arthop.co";
+// const isProd = _get(window, 'location.hostname', '').toLowerCase() === "arthop.co";
+
+var isProd = typeof window === 'undefined' ? !process.env.STAGING : __WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(window, 'location.hostname', '').toLowerCase() === "arthop.co";
 
 function Routes() {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
