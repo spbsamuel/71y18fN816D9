@@ -25258,6 +25258,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+var window = { location: { hostname: process.env.STAGING ? "devarthop.site" : "arthop.co" } };
+
 function serverRenderer() {
   return function (req, res, next) {
     var search = Object(__WEBPACK_IMPORTED_MODULE_13_query_string__["extract"])(req.url);
@@ -33217,7 +33219,7 @@ var warning = __webpack_require__(12);
 
 var ReactComponentTreeHook;
 
-if (typeof process !== 'undefined' && Object({"NODE_ENV":"production"}) && "production" === 'test') {
+if (typeof process !== 'undefined' && process.env && "production" === 'test') {
   // Temporary hack.
   // Inline requires don't work well with Jest:
   // https://github.com/facebook/react/issues/7240
@@ -34374,7 +34376,7 @@ var warning = __webpack_require__(12);
 
 var ReactComponentTreeHook;
 
-if (typeof process !== 'undefined' && Object({"NODE_ENV":"production"}) && "production" === 'test') {
+if (typeof process !== 'undefined' && process.env && "production" === 'test') {
   // Temporary hack.
   // Inline requires don't work well with Jest:
   // https://github.com/facebook/react/issues/7240
@@ -43961,7 +43963,7 @@ module.exports = function httpAdapter(config) {
     var proxy = config.proxy;
     if (!proxy) {
       var proxyEnv = protocol.slice(0, -1) + '_proxy';
-      var proxyUrl = Object({"NODE_ENV":"production"})[proxyEnv] || Object({"NODE_ENV":"production"})[proxyEnv.toUpperCase()];
+      var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];
       if (proxyUrl) {
         var parsedProxyUrl = url.parse(proxyUrl);
         proxy = {
@@ -44296,7 +44298,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"NODE_ENV":"production"}).DEBUG;
+    r = process.env.DEBUG;
   }
 
   return r;
@@ -44521,7 +44523,7 @@ exports.colors = [6, 2, 3, 4, 5, 1];
  *   $ DEBUG_COLORS=no DEBUG_DEPTH=10 DEBUG_SHOW_HIDDEN=enabled node script.js
  */
 
-exports.inspectOpts = Object.keys(Object({"NODE_ENV":"production"})).filter(function (key) {
+exports.inspectOpts = Object.keys(process.env).filter(function (key) {
   return /^debug_/i.test(key);
 }).reduce(function (obj, key) {
   // camel-case
@@ -44531,7 +44533,7 @@ exports.inspectOpts = Object.keys(Object({"NODE_ENV":"production"})).filter(func
     .replace(/_([a-z])/g, function (_, k) { return k.toUpperCase() });
 
   // coerce string value into JS value
-  var val = Object({"NODE_ENV":"production"})[key];
+  var val = process.env[key];
   if (/^(yes|on|true|enabled)$/i.test(val)) val = true;
   else if (/^(no|off|false|disabled)$/i.test(val)) val = false;
   else if (val === 'null') val = null;
@@ -44548,7 +44550,7 @@ exports.inspectOpts = Object.keys(Object({"NODE_ENV":"production"})).filter(func
  *   $ DEBUG_FD=3 node script.js 3>debug.log
  */
 
-var fd = parseInt(Object({"NODE_ENV":"production"}).DEBUG_FD, 10) || 2;
+var fd = parseInt(process.env.DEBUG_FD, 10) || 2;
 
 if (1 !== fd && 2 !== fd) {
   util.deprecate(function(){}, 'except for stderr(2) and stdout(1), any other usage of DEBUG_FD is deprecated. Override debug.log if you want to use a different log function (https://git.io/debug_fd)')()
@@ -44628,9 +44630,9 @@ function save(namespaces) {
   if (null == namespaces) {
     // If you set a process.env field to null or undefined, it gets cast to the
     // string 'null' or 'undefined'. Just delete instead.
-    delete Object({"NODE_ENV":"production"}).DEBUG;
+    delete process.env.DEBUG;
   } else {
-    Object({"NODE_ENV":"production"}).DEBUG = namespaces;
+    process.env.DEBUG = namespaces;
   }
 }
 
@@ -44642,7 +44644,7 @@ function save(namespaces) {
  */
 
 function load() {
-  return Object({"NODE_ENV":"production"}).DEBUG;
+  return process.env.DEBUG;
 }
 
 /**

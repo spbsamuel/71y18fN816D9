@@ -10,6 +10,7 @@ arthop/arthop_webapp:
     - echo $DISTELLI_INSTALLHOME
     - cd $DISTELLI_INSTALLHOME
     - echo "Start Application"
+    - cp /distelli/.env .
     - sudo /usr/local/bin/docker-compose build
     - sudo /usr/local/bin/docker-compose -p app up -d
     - sudo docker ps

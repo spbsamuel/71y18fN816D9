@@ -6,6 +6,8 @@ const app = express();
 const ServerRendererPath = path.join(__dirname, './dist/server.js');
 const ServerRenderer = require(ServerRendererPath).default;
 
+require('dotenv').config();
+
 app.get('/robots.txt', function (req, res) {
   res.type('text/plain');
   res.send("User-agent: *\nDisallow: /");
