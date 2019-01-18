@@ -38639,8 +38639,6 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 
 
 
-// const isProd = _get(window, 'location.hostname', '').toLowerCase() === "arthop.co";
-
 var isProd = typeof window === 'undefined' ? !process.env.STAGING : __WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(window, 'location.hostname', '').toLowerCase() === "arthop.co";
 
 function Routes() {
@@ -63406,9 +63404,8 @@ var HomeHeroSlider = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var slideKey = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(this.props.homeSlides || {})[0],
-          slide = __WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(this.props, ['homeSlides', slideKey], { images: [], data: {} });
-
+      var slideKey = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(this.props.homeSlides || {})[0];
+      var slide = __WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(this.props.homeSlides, [slideKey], { images: [], data: {} });
       return __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
         'div',
         { className: __WEBPACK_IMPORTED_MODULE_8__HomeHeroSlider_scss___default.a.HomeHeroSlider },
@@ -63473,7 +63470,8 @@ function HomeHeroImage() {
 
 function ImageLinkSlide(_ref) {
   var image = _ref.image,
-      url_link = _ref.url_link;
+      _ref$url_link = _ref.url_link,
+      url_link = _ref$url_link === undefined ? '/' : _ref$url_link;
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_2_react_router_dom_es_Link__["a" /* default */],
