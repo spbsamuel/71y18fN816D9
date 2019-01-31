@@ -9626,7 +9626,7 @@ function MainInfoCard(_ref) {
 function CoverImage(_ref2) {
   var cover_image = _ref2.cover_image;
 
-  return cover_image ? __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_6__LegacyDetailedView_scss___default.a.CoverImage, style: { backgroundImage: 'url(\'' + cover_image + '\')' } }) : __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_6__LegacyDetailedView_scss___default.a.CoverImagePlaceHolder });
+  return cover_image ? __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_6__LegacyDetailedView_scss___default.a.CoverImage, style: { backgroundImage: 'url("' + encodeURI(cover_image) + '")' } }) : __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_6__LegacyDetailedView_scss___default.a.CoverImagePlaceHolder });
 }
 
 function EntityDescription(_ref3) {
@@ -53250,7 +53250,7 @@ var EditorialsView = function (_React$Component) {
 
 var EditorialCoverImage = function EditorialCoverImage(_ref2) {
   var cover_image = _ref2.cover_image;
-  return cover_image ? __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_7__EditorialDetailedView_scss___default.a.cover_image, style: { backgroundImage: 'url(\'' + cover_image + '\')' } }) : __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_7__EditorialDetailedView_scss___default.a.no_cover_image });
+  return cover_image ? __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_7__EditorialDetailedView_scss___default.a.cover_image, style: { backgroundImage: 'url("' + encodeURI(cover_image) + '")' } }) : __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_7__EditorialDetailedView_scss___default.a.no_cover_image });
 };
 
 var EditorialDetails = function EditorialDetails(_ref3) {
@@ -63150,7 +63150,7 @@ function ImageOverlay(_ref) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: __WEBPACK_IMPORTED_MODULE_1__ImageOverlay_scss___default.a.ImageOverlayCardWrapper },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__ImageOverlay_scss___default.a.ImageOverlay, style: { backgroundImage: 'url(\'' + image + '\')' } }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__ImageOverlay_scss___default.a.ImageOverlay, style: { backgroundImage: 'url("' + encodeURI(image) + '")' } }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_1__ImageOverlay_scss___default.a.ImageOverlayCard },
