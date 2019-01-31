@@ -9687,7 +9687,8 @@ function DetailsCard(_ref5) {
       opening_hours = _ref5.opening_hours,
       website = _ref5.website,
       email = _ref5.email,
-      contact_number = _ref5.contact_number;
+      contact_number = _ref5.contact_number,
+      admission_details = _ref5.admission_details;
 
   return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
     'div',
@@ -9739,7 +9740,7 @@ function DetailsCard(_ref5) {
     __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
       'p',
       null,
-      'Free'
+      admission_details || 'Free'
     ),
     __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(WebsiteLink, { website: website }),
     __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(MailLink, { email: email }),
