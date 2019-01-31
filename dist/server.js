@@ -53322,7 +53322,11 @@ var EditorialDetails = function EditorialDetails(_ref3) {
 
 var EditorialFullHtml = function EditorialFullHtml(_ref4) {
   var children = _ref4.children;
-  return __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_7__EditorialDetailedView_scss___default.a.editorial_full_html, dangerouslySetInnerHTML: { __html: children } });
+
+  var oldImgUrlRe = /https?:\/\/arthop\.co\/blog-media/g;
+  var newImgUrl = 'https://s3-ap-southeast-1.amazonaws.com/arthop/public/blog_media';
+  var updatedText = (children || '').replace(oldImgUrlRe, newImgUrl);
+  return __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_7__EditorialDetailedView_scss___default.a.editorial_full_html, dangerouslySetInnerHTML: { __html: updatedText } });
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (EditorialsView);
