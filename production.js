@@ -6,9 +6,12 @@ const app = express();
 const ServerRendererPath = path.join(__dirname, './dist/server.js');
 const ServerRenderer = require(ServerRendererPath).default;
 
-app.get('/robots.txt', function (req, res) {
+app.use('/robots.txt', function (req, res) {
   res.type('text/plain');
-  res.send("User-agent: *\nDisallow: /");
+  if (process.env.STAGING) {
+    res.send("User-agent: *\nDisallow: /");
+  }
+  res.send("User-agent: *\nDisallow: ");
 });
 
 app.use(favicon(path.join(__dirname, 'favicon.ico')));
