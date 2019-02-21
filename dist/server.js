@@ -38572,7 +38572,7 @@ var withRouter = function withRouter(Component) {
 		    markup = _ref.markup,
 		    preLoadedState = _ref.preLoadedState;
 
-		return '<!doctype html>\n<html ' + helmet.htmlAttributes.toString() + '>\n<head prefix="og: http://ogp.me/ns#">\n\t' + helmet.title.toString() + '\n\t' + helmet.meta.toString() + '\n\t' + helmet.link.toString() + '\n\t<style type="text/css">\n  .no-fouc {display: none;}\n</style>\n</head>\n<body ' + helmet.bodyAttributes.toString() + ' class=\'no-fouc\'}>\n\t<div id="root">' + markup + '</div>\n\t<script src="/dist/client.js" async></script>\n\t' + ( true ? '<link rel="stylesheet" type="text/css" href="/dist/main.css">' : '') + '\n\t<script>\n    window.__PRELOADED_STATE__ = ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(preLoadedState).replace(/</g, '\\u003c') + '\n  </script>\n</body>\n</html>';
+		return '<!doctype html>\n<html ' + helmet.htmlAttributes.toString() + '>\n<head prefix="og: http://ogp.me/ns#">\n\t' + helmet.title.toString() + '\n\t' + helmet.meta.toString() + '\n\t' + helmet.link.toString() + '\n\t<style type="text/css">\n  .no-fouc {display: none;}\n</style>\n<meta name="google-site-verification" content="z48yTdW3KLoGqeTyaQBrAgvZu6hWfloqHFWxD-Ku450" />\n</head>\n<body ' + helmet.bodyAttributes.toString() + ' class=\'no-fouc\'}>\n\t<div id="root">' + markup + '</div>\n\t<script src="/dist/client.js" async></script>\n\t' + ( true ? '<link rel="stylesheet" type="text/css" href="/dist/main.css">' : '') + '\n\t<script>\n    window.__PRELOADED_STATE__ = ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(preLoadedState).replace(/</g, '\\u003c') + '\n  </script>\n</body>\n</html>';
 });
 
 /***/ }),
