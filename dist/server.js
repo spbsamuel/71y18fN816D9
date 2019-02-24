@@ -9694,6 +9694,7 @@ function DetailsCard(_ref5) {
       contact_number = _ref5.contact_number,
       admission_details = _ref5.admission_details;
 
+  var eventOngoing = new Date(start_date) <= new Date() && new Date() <= new Date(end_date);
   return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
     'div',
     { className: __WEBPACK_IMPORTED_MODULE_6__LegacyDetailedView_scss___default.a.DetailsCard },
@@ -9702,7 +9703,7 @@ function DetailsCard(_ref5) {
       null,
       category
     ),
-    detailed_timings && __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_components_CardElements__["d" /* TimeStatus */], {
+    detailed_timings && eventOngoing && __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_components_CardElements__["d" /* TimeStatus */], {
       utcDayTimeNow: __WEBPACK_IMPORTED_MODULE_4_date_fns_format___default()(new Date(new Date().toUTCString().substr(0, 25)), 'dHHmm'),
       todayDateTime: new Date(),
       timeArrays: detailed_timings,
@@ -38644,7 +38645,7 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 
 
 
-var isProd = typeof window === 'undefined' ? !process.env.STAGING : __WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(window, 'location.hostname', '').toLowerCase() === "arthop.co";
+var isProd = typeof window === 'undefined' ? !process.env.STAGING : /arthop\.co/.test(__WEBPACK_IMPORTED_MODULE_11_lodash_get___default()(window, 'location.hostname', '').toLowerCase());
 
 function Routes() {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -63155,6 +63156,7 @@ function ImageOverlay(_ref) {
       timings = _ref.timings,
       location = _ref.location;
 
+  var eventOngoing = new Date(timings.start_date) <= new Date() && new Date() <= new Date(timings.end_date);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: __WEBPACK_IMPORTED_MODULE_1__ImageOverlay_scss___default.a.ImageOverlayCardWrapper },
@@ -63182,7 +63184,7 @@ function ImageOverlay(_ref) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: __WEBPACK_IMPORTED_MODULE_1__ImageOverlay_scss___default.a.TimingGroup },
-          timings.detailed_timings && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_components_CardElements__["d" /* TimeStatus */], {
+          timings.detailed_timings && eventOngoing && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_components_CardElements__["d" /* TimeStatus */], {
             utcDayTimeNow: __WEBPACK_IMPORTED_MODULE_3_date_fns_format___default()(new Date(new Date().toUTCString().substr(0, 25)), 'dHHmm'),
             todayDateTime: new Date(),
             timeArrays: timings.detailed_timings,
