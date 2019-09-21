@@ -25293,11 +25293,12 @@ function serverRenderer() {
         return store.dispatch(getAction(match));
       })).then(function () {
         console.log('Match and loaded');
+        console.log(req.url);
         res.status(200).send(renderHtmlWithStore(store, req.url));
       }).catch(function (error) {
         //  log error
         console.log('Match fail loading');
-        console.log(req);
+        console.log(req.url);
         console.log(error);
         res.status(200).send(renderHtmlWithStore(store, req.url));
       });
