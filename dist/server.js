@@ -25297,6 +25297,7 @@ function serverRenderer() {
       }).catch(function (error) {
         //  log error
         console.log('Match fail loading');
+        console.log(req);
         console.log(error);
         res.status(200).send(renderHtmlWithStore(store, req.url));
       });
