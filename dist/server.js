@@ -25276,6 +25276,7 @@ function serverRenderer() {
         }
       }
     };
+    console.log(req.url);
     var store = Object(__WEBPACK_IMPORTED_MODULE_12_store_storeFactory__["a" /* default */])(initialState, __WEBPACK_IMPORTED_MODULE_11_history_createMemoryHistory___default()());
     var matchedConfig = __WEBPACK_IMPORTED_MODULE_10_lodash_find___default()(__WEBPACK_IMPORTED_MODULE_8_routes_routesConfig__, function (_ref) {
       var route = _ref.route;
@@ -25293,12 +25294,10 @@ function serverRenderer() {
         return store.dispatch(getAction(match));
       })).then(function () {
         console.log('Match and loaded');
-        console.log(req.url);
         res.status(200).send(renderHtmlWithStore(store, req.url));
       }).catch(function (error) {
         //  log error
         console.log('Match fail loading');
-        console.log(req.url);
         console.log(error);
         res.status(200).send(renderHtmlWithStore(store, req.url));
       });
